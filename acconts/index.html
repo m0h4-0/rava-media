@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login1">
+        <div class="container">
+            <h1>ورود به حساب کاربری</h1>
+            <form id="myForm">
+                <div class="input-group">
+                    <label for="username">نام کاربری</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">کلمه عبور</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn">ورود</button>
+            </form>
+        </div>
+        <div class="container_down">
+            <a class="container_down_a1" href="login.html"><span class="container_down_taxt1">ورود بدون حساب کاربری</span></a>
+            <a class="container_down_a2" href="sign up.html"><apan class="container_down_taxt2">ثبت نام</span></a>
+        </div>
+    </div>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // جلوگیری از ارسال پیش‌فرض فرم
+            
+            // بررسی کامل بودن فیلدها
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "11" && password === "11") {
+                // اگر فیلدها پر بودند، به صفحه جدید بروید
+                window.location.href = ""; // آدرس صفحه جدید
+            } else {
+                alert("خطا");
+            }
+        });
+    </script>
+</body>
+</html>
