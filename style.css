@@ -501,6 +501,40 @@ footer {
     align-items: center;
 }
 
+/*kjfpdfjpioasdflk;asjdfpoajkf;lakjf;akjf;'kasdkl;f;jka;lfks;fakf;lsakfla;fkl;afkas;lfkal;fkask*/
+
+.header2 {
+    position: relative;
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+}
+.header2-div {
+    background-color: rgb(253, 253, 253);
+    display: flex;
+    width: 100%;
+    direction: rtl;
+    flex-direction: row;
+    padding: 35px 22px;
+    border-top: 1px solid #c3c3c3;
+    gap: 16px;
+    align-items: center;
+}
+.header2-div-div {
+    display: flex;
+    flex-direction: column;
+    font-family: 'font1';
+    font-size: 19px;
+}
+
+/*';dklfl;dskflsjf;skf;lsdfkdskf;sdlk'fdlosfiopweiwerlkewqrqwejrlqjl;rkqw;lrkq;lrkqw;lrkq;rkqw;l*/
+
+.blogcontents {
+    margin: 96px 10px 12px;
+    padding: 15px 8px;
+}
+
+
 
 @media screen and (min-width: 800px) {
     .header-pcmenu {
