@@ -59,3 +59,15 @@ function closeStory() {
     document.getElementById("storyContainer").style.display = "none";
     current = 0;
 }
+
+
+
+document.querySelectorAll(".blogcontents-link-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const text = btn.dataset.copy;
+        navigator.clipboard.writeText(text).then(() => {
+            btn.innerText = "Copied";
+            setTimeout(() => btn.innerText = "Copy", 1500)
+        })
+    })
+})
