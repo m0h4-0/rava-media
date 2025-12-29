@@ -71,3 +71,12 @@ document.querySelectorAll(".blogcontents-link-btn").forEach(btn => {
         })
     })
 })
+document.querySelectorAll(".top-post-btns-copy").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const text = btn.dataset.copy;
+        navigator.clipboard.writeText(text).then(() => {
+            btn.innerText = "کپی شد";
+            setTimeout(() => btn.innerText = "کپی", 1500)
+        })
+    })
+})
