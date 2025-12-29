@@ -457,7 +457,8 @@ p {
     font-size: 18px;
 }
 .newblogs-div-blog-p {
-    margin-bottom: 15px;
+    margin: 10px 0 15px 0;
+    text-align: justify;
 }
 .newblogs-div-blog-a {
     background: #0089ff;
@@ -590,6 +591,69 @@ footer {
     border: none;
     border-radius: 0 0 6px 6px;
     padding: 5px 0;
+}
+/*kldfjlaslffffffffffffffffffflsllllllkajfdddddddddddddddd*/
+/*;hljs;;;;;;;;;;ehopioqrfookioafguwoeaijtnlkdfjlksjflajfklsfjdsdlkfjsafj;salkjfklsjljfkla;jfkl;saj*/
+.text-buttons {
+    overflow-x: auto;
+    white-space: nowrap;
+    direction: rtl;
+    display: flex;
+    gap: 10px;
+    padding: 10px 14px 15px 0px;
+}
+.text-buttons button {
+    display: inline-block;
+    font-family: 'font2';
+    font-size: 17px;
+    padding: 0 24px;
+    height: 48px;
+    border-radius: 26px;
+    border: none;
+    background: white;
+    box-shadow: 0 0 6px 1px #dbdbdb;
+}
+.text-texts {
+    padding: 12px 5px;
+}
+.text-texts-div {
+    background: rgb(240, 240, 240);
+    color: black;
+    padding: 6px 12px 0;
+    direction: rtl;
+    border-radius: 12px;
+    border: 1px solid rgb(221, 221, 221);
+}
+.text-texts-div-div1 {
+    font-family: 'font3';
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.text-texts-div-div1-span {margin: 8px 0 0 20px; text-align: justify;}
+.text-texts-div-type {
+    margin: 4px 0 0;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+.text-texts-div-type-t {
+    background: #e3e3e3;
+    padding: 6px 13px;
+    border-radius: 6px;
+    font-family: font3;
+    font-size: 12px;
+    color: #666666;
+}
+.text-texts-div-btns {margin: 10px 0;}
+.text-texts-div-btns-copy {
+    font-family: font3;
+    padding: 5px 15px;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    width: 100%;
 }
 
 
