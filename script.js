@@ -62,21 +62,52 @@ function closeStory() {
 
 
 
-document.querySelectorAll(".blogcontents-link-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        const text = btn.dataset.copy;
-        navigator.clipboard.writeText(text).then(() => {
-            btn.innerText = "Copied";
-            setTimeout(() => btn.innerText = "Copy", 1500)
-        })
-    })
-})
+document.addEventListener('click', e => {
+    const topPostBtnsDownloadBtn = e.target.closest('.top-post-btns-download');
+    if (!topPostBtnsDownloadBtn) return;
+
+    const topPostBtnsDownloadUrl = topPostBtnsDownloadBtn.dataset.download;
+    if (!topPostBtnsDownloadUrl) return;
+
+    const topPostBtnsDownloadA = document.createElement('topPostBtnsDownloadA');
+    topPostBtnsDownloadA.href = topPostBtnsDownloadUrl;
+    topPostBtnsDownloadA.download = '';
+    topPostBtnsDownloadA.click();
+});
+document.querySelectorAll('.top-post-stars').forEach(star => {
+    let clicked = false;
+
+    const span = star.querySelector('span');
+    const baseCount = parseInt(span.innerText);
+
+    star.addEventListener('click', () => {
+        if (!clicked) {
+            star.innerHTML = '&starf;<span>' + (baseCount + 1) + '</span>';
+            clicked = true;
+        } else {
+            star.innerHTML = '&star;<span>' + baseCount + '</span';
+            clicked = false;
+        }
+    });
+});
+
+
+
 document.querySelectorAll(".top-post-btns-copy").forEach(btn => {
     btn.addEventListener("click", () => {
         const text = btn.dataset.copy;
         navigator.clipboard.writeText(text).then(() => {
             btn.innerText = "کپی شد";
             setTimeout(() => btn.innerText = "کپی", 1500)
+        })
+    })
+})
+document.querySelectorAll(".blogcontents-link-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const text = btn.dataset.copy;
+        navigator.clipboard.writeText(text).then(() => {
+            btn.innerText = "Copied";
+            setTimeout(() => btn.innerText = "Copy", 1500)
         })
     })
 })
