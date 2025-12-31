@@ -245,3 +245,25 @@ buttons.forEach(btn => {
   
 // first load
 renderTexts();
+/*-------------------------------------------------------------------------------------------------------------------------------admin page*/
+function openAdminForm() {
+    const modal = document.getElementById('admin-modal');
+    modal.style.display = 'flex';
+}
+function adminLogin() {
+    const pass = document.getElementById("admin-pass").value;
+    const SECRET1 = "m0h-216548-secretcode-15478-xyz";
+    const SECRET2 = "sup-564254-secretcode-23174-xyz"
+    if (pass === SECRET1) {
+        showFullScreen();
+    } else {
+        alert("رمز اشتباه است");
+    }
+}
+function showFullScreen() {
+    const fullScreenDiv = document.getElementById("adminDiv");
+    setTimeout(() => {
+        alert("به پنل مدیریت خوش امدید.")
+        fullScreenDiv.style.display = "flex";
+    }, 1000);
+}

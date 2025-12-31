@@ -35,7 +35,11 @@
     <header>
         <div class="header-div">
             <img class="header-div-logo" src="img/R-logo1.jpg">
-            Rava media
+            Rava media<button style="margin-left: 30px;
+            background: none;
+            border: none;
+            color: rgb(253, 253, 253);
+            padding: 3px;" onclick="openAdminForm()">/</button>
         </div>
         <div class="header-pcmenu">;kl</div>
         <button class="header-menu" onclick="openMenu()">
@@ -202,6 +206,20 @@
             </div>
         </div>
     </footer>
+    <div id="admin-modal">
+      <div class="modal-box">
+        <h2>ورود به پنل مدیریت</h2>
+        <input id="admin-pass" placeholder="رمز دسترسی" />
+        <button onclick="adminLogin()">ورود</button>
+      </div>
+    </div>
+    <div id="adminDiv">
+        <h1 style="font-family: font1; position: absolute; text-align: center; width: 100%; top: 28px;">پنل مدیریت (کمکی)</h1>
+        <button onclick="alert('خطا')" class="admindiv-changetitle" style="top: 240px;">عوض کردن title</button>
+        <button onclick="alert('خطا')" class="admindiv-changetheme" style="top: 120px;">عوض کردن تم کلی سایت</button>
+        <button onclick="alert('خطا')" class="admindiv-changelang" style="top: 180px;">زبان سایت</button>
+        <a class="admindiv-back" href="index.html">برگشت به سایت</a>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
