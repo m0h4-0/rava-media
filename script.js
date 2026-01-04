@@ -1,3 +1,4 @@
+//-----------------------------------------------------------------------------------------------------menu
 let menuIsOpen = false;
 function openMenu() {
     const menu = document.getElementById("menu");
@@ -9,15 +10,17 @@ function openMenu() {
     menuIsOpen = !menuIsOpen;
 }
 
+//----------------------------------------------------------------------------------------------------story
 function yourStory() {
     alert("برای استوری گذاشتن نیاز به حساب کاربری داری !");
 }
 const allStories = {
     story1: [
-        { name: "Rava", profile: "img/R-logo2.jpg", image: "" }
+        { name: "Rava", profile: "img/story-ravamedia.jpg", image: "data/ravamedia-story1.jpg" }
     ],
     story2: [
-        { name: "new pictures", profile: "img/picture-logo2.png", image: "" }
+        { name: "new pictures", profile: "img/story-newpictures.png", image: "data/newpictures-story1.jpg" },
+        { name: "new pictures", profile: "img/story-newpictures.png", image: "data/newpictures-story2.jpg" }
     ]
 };
 let current = 0;
@@ -60,20 +63,7 @@ function closeStory() {
     current = 0;
 }
 
-
-
-document.addEventListener('click', e => {
-    const topPostBtnsDownloadBtn = e.target.closest('.top-post-btns-download');
-    if (!topPostBtnsDownloadBtn) return;
-
-    const topPostBtnsDownloadUrl = topPostBtnsDownloadBtn.dataset.download;
-    if (!topPostBtnsDownloadUrl) return;
-
-    const topPostBtnsDownloadA = document.createElement('topPostBtnsDownloadA');
-    topPostBtnsDownloadA.href = topPostBtnsDownloadUrl;
-    topPostBtnsDownloadA.download = '';
-    topPostBtnsDownloadA.click();
-});
+//---------------------------------------------------------------------------------------------------topPost
 document.querySelectorAll('.top-post-stars').forEach(star => {
     let clicked = false;
 
@@ -90,9 +80,6 @@ document.querySelectorAll('.top-post-stars').forEach(star => {
         }
     });
 });
-
-
-
 document.querySelectorAll(".top-post-btns-copy").forEach(btn => {
     btn.addEventListener("click", () => {
         const text = btn.dataset.copy;
@@ -112,140 +99,20 @@ document.querySelectorAll(".blogcontents-link-btn").forEach(btn => {
     })
 })
 
-/*---------------------------------------------------------------------------------------------------------text.html*/
-const textsData = [
-    {
-        text: `کاش اونقدر هم ک توقع دارید لیاقتم داشتید ...`,
-        stars: 310,
-        types: ["بیو", "شاخ"]
-    },
-    {
-        text: `تولد تنها دختری که تونست منو با وجود تمام عیب هایم را دوست داشته باشه مبارک. عاشقتم.`,
-        stars: 244,
-        types: ["تبریک تولد", "عاشقانه"]
-    },
-    {
-        text: `نه اخلاق دارم نه حوصله نه اعصاب کلن #کنسلم!`,
-        stars: 221,
-        types: ["بیو", "مغرور", "شاخ"]
-    },
-    {
-        text: `آدم های کمی درک میکنن
-        ما در موقعیت هایی زندگی کردیم که همیشه با نشدن ها شروع و تموم شد:)`,
-        stars: 140,
-        types: ["بیو", "غمگین"]
-    },
-    {
-        text: `سیگارکشیدن‌ضررش‌کمتراز‌دوست‌داشتن‌آدماست.`,
-        stars: 203,
-        types: ["بیو", "مغرور", "شاخ"]
-    },
-    {
-        text: `با تو میشه بدون بال پرواز کرد🎀✨`,
-        stars: 41,
-        types: ["بیو", "عاشقانه"]
-    },
-    {
-        text: `𝘢𝘯𝘨𝘦𝘳 𝘪𝘴 𝘵𝘩𝘦 𝘴𝘩𝘪𝘦𝘭𝘥 𝘰𝘧 𝘮𝘺 𝘧𝘦𝘦𝘭𝘪𝘯𝘨𝘴.
-        عصبانیت سپر احساساتِ منه🕊`,
-        stars: 69,
-        types: ["بیو", "احساسات"]
-    },
-    {
-        text: `با ما سَرد نَباش سَرما میخوری...🙂😂`,
-        stars: 23,
-        types: ["طنز", "شاخ"]
-    },
-    {
-        text: `-مغز جالب ترین عـضو بدنه 
-        از زمان تولد تا موقع مرگ کار میکنه به جز سر امتـحان😐😞🎀`,
-        stars: 189,
-        types: ["طنز", "استرس"]
-    },
-];
-const container = document.querySelector(".text-texts");
-const buttons = document.querySelectorAll(".text-buttons-btn");
+//---------------------------------------------------------------------------------------------downloadImgs
+function downloadImageLocal(imgSrc) {
+    const a = document.createElement("a");
+    a.href = imgSrc;
+    a.download = imgSrc.split("/").pop();
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+document.querySelector(".top-post-btns-download").addEventListener("click", () => {
+    downloadImageLocal("data/newpictures-story1.jpg");
+});
 
-function attachStars() {
-    document.querySelectorAll('.top-post-stars').forEach(star => {
-        let clicked = false;
-        const span = star.querySelector('span');
-        const baseCount = parseInt(span.innerText);
-        
-        star.addEventListener('click', () => {
-            if (!clicked) {
-                star.innerHTML = '&starf;<span>' + (baseCount + 1) + '</span>';
-                clicked = true;
-            } else {
-                star.innerHTML = '&star;<span>' + baseCount + '</span>';
-                clicked = false;
-            }
-        });
-    });
-}  
-function shuffle(arr) {
-    return arr.sort(() => Math.random() - 0.5);
-}
-function showLoading() {
-    container.innerHTML = `
-        <div style="direction: rtl;
-        text-align: center;
-        padding: 30px 30px 220px;
-        font-family: 'font1';
-        opacity: .7;
-        font-size: 20px;">در حال بارگذاری...</div>
-    `;
-}
-function renderTexts(filter = "همه") {
-    let filtered =
-        filter === "همه"
-            ? textsData
-            : textsData.filter(t => t.types.includes(filter));
-    shuffle(filtered);
-    container.innerHTML = "";
-    filtered.forEach(item => {
-        const div = document.createElement("div");
-        div.className = "text-texts-div";
-  
-        div.innerHTML = `
-            <div class="text-texts-div-div1">
-                <span class="text-texts-div-div1-span">${item.text}</span>
-                <div class="top-post-stars">☆<span>${item.stars}</span></div>
-            </div>
-            <div class="text-texts-div-type" style="margin-top:8px;">
-                ${item.types.map(t => `<div class="text-texts-div-type-t">${t}</div>`).join("")}
-            </div>
-            <div class="text-texts-div-btns">
-                <button class="text-texts-div-btns-copy" data-copy="${item.text}">کپی</button>
-            </div>
-        `;
-        container.appendChild(div);
-        attachStars();
-    });
-}
-// copy
-document.addEventListener("click", e => {
-    if (e.target.classList.contains("text-texts-div-btns-copy")) {
-        navigator.clipboard.writeText(e.target.dataset.copy);
-    }
-});
-// buttons + loading
-buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-        buttons.forEach(b => b.style.background = "");
-        btn.style.background = "#d3d3d3";
-        
-        showLoading();
-        
-        setTimeout(() => {
-            renderTexts(btn.innerText);
-        }, 800);
-    });
-});
-  
-// first load
-renderTexts();
-/*-------------------------------------------------------------------------------------------------------------------------------admin page*/
+//---------------------------------------------------------------------------------------------admin page
 function openAdminForm() {
     const modal = document.getElementById('admin-modal');
     modal.style.display = 'flex';

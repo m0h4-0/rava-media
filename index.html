@@ -22,6 +22,14 @@
             window.location.href = "about:blank";
         };
     </script-->
+    <script>
+        window.onload = function () {
+            alert(`کاربر گرامی،
+این وب‌سایت در حال حاضر در مرحله توسعه و بروزرسانی قرار دارد.
+ممکن است برخی بخش‌ها به‌درستی نمایش داده نشوند یا با اختلال موقت همراه باشند.
+در صورت مشاهده هرگونه مشکل، لطفاً از طریق آیدی تلگرام @m0h4mm4d0h با ما در ارتباط باشید`);
+        };
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,14 +42,14 @@
 <body>
     <header>
         <div class="header-div">
-            <img class="header-div-logo" src="img/R-logo1.jpg">
+            <img class="header-div-logo" src="img/rava-logo.jpg">
             Rava media<button style="margin: 56px 0 0 30px;
             background: none;
             border: none;
             color: rgb(253, 253, 253);
             padding: 1px;" onclick="openAdminForm()">/</button>
         </div>
-        <div class="header-pcmenu">;kl</div>
+        <div class="header-pcmenu">منو</div>
         <button class="header-menu" onclick="openMenu()">
             <svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="bars" class="svg-inline--fa fa-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 88C0 74.7 10.7 64 24 64H424c13.3 0 24 10.7 24 24s-10.7 24-24 24H24C10.7 112 0 101.3 0 88zM0 248c0-13.3 10.7-24 24-24H424c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24zM448 408c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24H424c13.3 0 24 10.7 24 24z"></path></svg>
         </button>
@@ -59,9 +67,9 @@
     </div>
     <div>
         <div class="stories">
-            <div class="stories-mystory" style="position: relative;" onclick="yourStory()"><img class="stories-m-img" src="img/myprofile.png">Your story<div class="stories-m-img-add">+</div></div>
-            <div class="stories-stories" onclick="openStory(allStories.story1)"><img class="stories-img" src="img/R-logo2.jpg">Rava</div>
-            <div class="stories-stories" onclick="openStory(allStories.story2)"><img class="stories-img" src="img/picture-logo1.png">new pictures</div>
+            <div class="stories-mystory" style="position: relative;" onclick="yourStory()"><img class="stories-m-img" src="img/story-user.png">Your story<div class="stories-m-img-add">+</div></div>
+            <div class="stories-stories" onclick="openStory(allStories.story1)"><img class="stories-img" src="img/story-ravamedia.jpg">Rava</div>
+            <div class="stories-stories" onclick="openStory(allStories.story2)"><img class="stories-img" src="img/story-newpictures.png">new pictures</div>
         </div>
     </div>
     <div style="width: 100%; display: flex; justify-content: center; margin-top: 26px;">
@@ -85,10 +93,10 @@
             </div>
         </a>
         <a class="ravatools-any" style="border-radius: 0 0 10px 10px;" href="video.html">
-            <img class="ravatools-any-img" src="img/video.jpg">
+            <img class="ravatools-any-img" src="img/video2.jpg">
             <div class="ravatools-any-info">
-                <span style="color: black;">راوا ویدیو</span>
-                <span style="font-family: font3; font-size: 13px; color: #747474;">استوری , پست</span>
+                <span style="color: #a1a1a1;">راوا ویدیو</span>
+                <span style="font-family: font3; font-size: 13px; color: #a1a1a1;">استوری , پست</span>
             </div>
         </a>
     </div>
@@ -110,16 +118,18 @@
         <div class="top-post">
             <div class="top-post-i">
                 <div class="top-post-info">
-                    <img class="top-post-info-img" src="img/photo.jpg"><h3 class="top-post-info-h3">راوا عکس</h3>عکس ALAN WAKE II
+                    <img class="top-post-info-img" src="img/photo.jpg"><h3 class="top-post-info-h3">راوا عکس</h3>
                 </div>
-                <div class="top-post-stars">&star;<span>3454</span></div>
+                <div class="top-post-stars">&star;<span>6</span></div>
             </div>
-            <div class="top-post-content"><img class="top-post-content-img" src="data/photo001.jpg"></div>
+            <div class="top-post-content"><img class="top-post-content-img" src="data/top-post1.jpg"></div>
             <div class="top-post-type">
-                <div class="top-post-type-t">بکگراند کامپیوتر</div>
+                <div class="top-post-type-t">پس زمینه</div>
+                <div class="top-post-type-t">استوری</div>
+                <div class="top-post-type-t">ورزش</div>
             </div>
             <div class="top-post-btns">
-                <button class="top-post-btns-download" data-download="data/photo001.jpg">دانلود</button>
+                <button class="top-post-btns-download">دانلود</button>
                 <button class="top-post-btns-more" onclick="alert('اطلاعاتی موجود نیست.')">اطلاعات بیشتر &nbsp;←</button>
             </div>
         </div>
@@ -128,12 +138,12 @@
                 <div class="top-post-info">
                     <img class="top-post-info-img" src="img/text.jpg"><h3 class="top-post-info-h3">راوا متن</h3>
                 </div>
-                <div class="top-post-stars">&star;<span>310</span></div>
+                <div class="top-post-stars">&star;<span>5</span></div>
             </div>
             <div class="top-post-content">کاش اونقدر هم ک توقع دارید لیاقتم داشتید ...</div>
             <div class="top-post-type" style="margin-top: 8px;">
-                <div class="top-post-type-t">شاخ</div>
                 <div class="top-post-type-t">بیو</div>
+                <div class="top-post-type-t">غمگین</div>
             </div>
             <div class="top-post-btns">
                 <button class="top-post-btns-copy" data-copy="کاش اونقدر هم ک توقع دارید لیاقتم داشتید ...">کپی</button>
@@ -145,15 +155,14 @@
                 <div class="top-post-info">
                     <img class="top-post-info-img" src="img/text.jpg"><h3 class="top-post-info-h3">راوا متن</h3>
                 </div>
-                <div class="top-post-stars">&star;<span>244</span></div>
+                <div class="top-post-stars">&star;<span>4</span></div>
             </div>
-            <div class="top-post-content">تولد تنها دختری که تونست منو با وجود تمام عیب هایم را دوست داشته باشه مبارک. عاشقتم.</div>
+            <div class="top-post-content">گر نگهدار من آن است که من میدانم شیشه را در بغل سنگ نگه میدارد</div>
             <div class="top-post-type" style="margin-top: 8px;">
-                <div class="top-post-type-t">تبریک تولد</div>
-                <div class="top-post-type-t">عاشقانه</div>
+                <div class="top-post-type-t">شعر</div>
             </div>
             <div class="top-post-btns">
-                <button class="top-post-btns-copy" data-copy="تولد تنها دختری که تونست منو با وجود تمام عیب هایم را دوست داشته باشه مبارک. عاشقتم.">کپی</button>
+                <button class="top-post-btns-copy" data-copy="گر نگهدار من آن است که من میدانم شیشه را در بغل سنگ نگه میدارد">کپی</button>
                 <button class="top-post-btns-more" onclick="alert('اطلاعاتی موجود نیست.')">اطلاعات بیشتر &nbsp;←</button>
             </div>
         </div>
@@ -162,16 +171,15 @@
                 <div class="top-post-info">
                     <img class="top-post-info-img" src="img/text.jpg"><h3 class="top-post-info-h3">راوا متن</h3>
                 </div>
-                <div class="top-post-stars">&star;<span>221</span></div>
+                <div class="top-post-stars">&star;<span>4</span></div>
             </div>
-            <div class="top-post-content">نه اخلاق دارم نه حوصله نه اعصاب کلن #کنسلم!</div>
+            <div class="top-post-content">عزیز میشی وقتی تو این دنیا نباشی!🖤</div>
             <div class="top-post-type" style="margin-top: 8px;">
                 <div class="top-post-type-t">بیو</div>
-                <div class="top-post-type-t">مغرور</div>
-                <div class="top-post-type-t">شاخ</div>
+                <div class="top-post-type-t">غمگین</div>
             </div>
             <div class="top-post-btns">
-                <button class="top-post-btns-copy" data-copy="نه اخلاق دارم نه حوصله نه اعصاب کلن #کنسلم!">کپی</button>
+                <button class="top-post-btns-copy" data-copy="زیز میشی وقتی تو این دنیا نباشی!🖤">کپی</button>
                 <button class="top-post-btns-more" onclick="alert('اطلاعاتی موجود نیست.')">اطلاعات بیشتر &nbsp;←</button>
             </div>
         </div>
@@ -180,18 +188,11 @@
         <h2 class="newblogs-h2">وبلاگ های جدید</h2>
         <div class="newblogs-div">
             <div class="newblogs-div-blog">
-                <img class="newblogs-div-blog-img" src="data/1404.04.31.1.jpg">
-                <div class="newblogs-div-blog-info"><span style="direction: rtl;">31 تیر 1404</span><span>admin</span></div>
+                <img class="newblogs-div-blog-img" src="data/1404.10.10.1.jpg">
+                <div class="newblogs-div-blog-info"><span style="direction: rtl;">10 دی 1404</span><span>admin</span></div>
                 <div class="newblogs-div-blog-h1"> گذاشتن پس زمینه برای PC (ویندوز 7)</div>
                 <div class="newblogs-div-blog-p">در این وبلاگ قراره به ساده ترین شکل ممکن به شما اموزش بدیم چطور پس زمینه کامپیوترتون رو عوض کنید. همه چیز رو قدم به قدم جلو میریم.اگه دوست دارید دسکتاپتون ظاهر مرتب تر و جذاب تری داشته باشه حتما همراه این وبلاگ باشید.</div>
-                <a class="newblogs-div-blog-a" href="blogs/1404.04.31.html">ادامه مطلب &nbsp;←</a>
-            </div>
-            <div class="newblogs-div-blog">
-                <img class="newblogs-div-blog-img" src="data/1404.04.31.1.jpg">
-                <div class="newblogs-div-blog-info"><span style="direction: rtl;">31 تیر 1404</span><span>admin</span></div>
-                <div class="newblogs-div-blog-h1"> گذاشتن پس زمینه برای PC (ویندوز 7)</div>
-                <div class="newblogs-div-blog-p">در این وبلاگ قراره به ساده ترین شکل ممکن به شما اموزش بدیم چطور پس زمینه کامپیوترتون رو عوض کنید. همه چیز رو قدم به قدم جلو میریم.اگه دوست دارید دسکتاپتون ظاهر مرتب تر و جذاب تری داشته باشه حتما همراه این وبلاگ باشید.</div>
-                <a class="newblogs-div-blog-a" href="blogs/1404.04.31.html">ادامه مطلب &nbsp;←</a>
+                <a class="newblogs-div-blog-a" href="blogs/1404.10.10.html">ادامه مطلب &nbsp;←</a>
             </div>
             <a class="newblogs-div-more" href="blog.html">همه وبلاگ ها ...</a>
         </div>
