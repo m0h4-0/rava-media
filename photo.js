@@ -88,6 +88,22 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             src: "https://res.cloudinary.com/dyi35hebs/image/upload/v1767546997/1lh2vt2e_eqfmhl.jpg",
             stars: 1, types: ["پس زمینه", "ورزش", "استوری"]
+        },
+        {
+            src: "https://res.cloudinary.com/dyi35hebs/image/upload/v1767813832/1l4tev2s_ufhcea.jpg",
+            stars: 1, types: ["عاشقانه", "پروفایل"]
+        },
+        {
+            src: "https://res.cloudinary.com/dyi35hebs/image/upload/v1767813920/1lca478g_whm1ll.jpg",
+            stars: 0, types: ["عاشقانه", "پروفایل"]
+        },
+        {
+            src: "https://res.cloudinary.com/dyi35hebs/image/upload/v1767814302/1l796r13_ytudxi.jpg",
+            stars: 0, types: ["پس زمینه", "استوری", "عاشقانه"]
+        },
+        {
+            src: "https://res.cloudinary.com/dyi35hebs/image/upload/v1767814606/1l6rnenb_j4mr1j.jpg",
+            stars: 1, types: ["پس زمینه", "عاشقانه", "استوری"]
         }
     ];
     const photoContainer = document.querySelector(".photo-photos");
